@@ -13,7 +13,6 @@ var canThreePartsEqualSum = function(arr) {
             if(tempSum == targetSum){
                 tempSum = 0
                 partCount++
-                console.log({tempSum, targetSum, partCount})
             }
             if(partCount == 3){
                 return true
