@@ -5,7 +5,11 @@
  */
 var wordPattern = function(pattern, s) {
     let mappingObjofPattern = {}
+    let mappingObjofs = {}
     s = s.split(" ")
+    
+    if (s.length != pattern.length) return false
+        
     for(let i = 0; i < pattern.length; i++){
         if((mappingObjofPattern[pattern[i]] && mappingObjofPattern[pattern[i]] != s[i])){
             return false
@@ -16,19 +20,12 @@ var wordPattern = function(pattern, s) {
         else{
             return false
         }
-    }
-    
-    console.log(mappingObjofPattern)
-    
-    let mappingObjofs = {}
-    for(let i = 0; i < s.length; i++){
+        
         if((mappingObjofs[s[i]] && mappingObjofs[s[i]] != pattern[i])){
             return false
         }
         mappingObjofs[s[i]] = pattern[i]
     }
-    
-    console.log(mappingObjofs)
     
     return true
 };
