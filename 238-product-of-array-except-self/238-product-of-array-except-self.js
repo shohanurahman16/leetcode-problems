@@ -10,7 +10,7 @@ var productExceptSelf = function(nums) {
     // calculate prefix
     for(let i = 1; i < nums.length; i++){
         let currentPrefix = prefix * nums[i-1]
-        output.push(currentPrefix)
+        output[i] = currentPrefix
         prefix = currentPrefix
     }
     
