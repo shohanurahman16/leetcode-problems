@@ -14,9 +14,8 @@ var productExceptSelf = function(nums) {
         prefix = currentPrefix
     }
     
-    console.log(output)
     
-    // calculate postfix
+    // calculate postfix and output array
     let postfixArr = []
     for(let i = nums.length - 1; i >= 0; i--){
         let currentPostfix = postfix * (nums[i+1] != undefined ? nums[i+1] : 1)
@@ -24,8 +23,6 @@ var productExceptSelf = function(nums) {
         output[i] = output[i] * currentPostfix
         postfix = currentPostfix
     }
-    
-    console.log(postfixArr)
     
     return output
 };
