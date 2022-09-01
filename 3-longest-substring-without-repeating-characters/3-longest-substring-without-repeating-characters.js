@@ -10,7 +10,6 @@ var lengthOfLongestSubstring = function(s) {
     
     while(i < s.length){
         if(subStr.indexOf(s[i]) >= 0){
-            // s = s.substring(subStr.indexOf(s[i]) + 1)
             i = i - localMax + 1
             subStr = []
             localMax = 0
