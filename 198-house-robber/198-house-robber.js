@@ -3,7 +3,6 @@
  * @return {number}
  */
 var rob = function(nums) {
-    let dp = []
     prev = 0
     current = 0
     
