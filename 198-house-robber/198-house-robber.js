@@ -4,11 +4,14 @@
  */
 var rob = function(nums) {
     let dp = []
-    dp[0] = 0;
-    dp[1] = nums[0];
-    for(let i = 1; i < nums.length; i++){
-        dp[i+1] = Math.max(dp[i], dp[i-1] + nums[i])     
+    prev = 0
+    current = 0
+    
+    for(let i=0; i<nums.length; i++){
+        let temp = Math.max(prev+nums[i], current)
+        prev = current
+        current = temp
     }
     
-    return dp[nums.length]
+    return current
 };
