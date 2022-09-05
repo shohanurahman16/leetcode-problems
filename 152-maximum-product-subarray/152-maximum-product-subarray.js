@@ -16,7 +16,5 @@ var maxProduct = function(nums) {
         result = Math.max(result, dpMax[i])
     }
     
-    console.log(dpMax, dpMin)
-    
     return result
 };
