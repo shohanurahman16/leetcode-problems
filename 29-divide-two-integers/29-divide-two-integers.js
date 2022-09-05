@@ -17,5 +17,5 @@ var divide = function(dividend, divisor) {
         result++
     }
     
-    return (dividend>0 && divisor<0) || (dividend<0 && divisor>0) ? (-1)*result : result
+    return (dividend>0 && divisor<0) || (dividend<0 && divisor>0) ? -result : result
 };
