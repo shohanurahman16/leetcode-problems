@@ -8,16 +8,14 @@ var divide = function(dividend, divisor) {
     if (divisor === 1) return dividend;
     if (dividend === divisor) return 1;
     
-    return parseInt(dividend/divisor)
+    let result = 0
+    let absulateDividend = Math.abs(dividend)
+    let absulateDivisor  = Math.abs(divisor)
     
-//     let result = 0
-//     let absulateDividend = Math.abs(dividend)
-//     let absulateDivisor  = Math.abs(divisor)
+    while(absulateDividend >= absulateDivisor){
+        absulateDividend = absulateDividend - absulateDivisor
+        result++
+    }
     
-//     while(absulateDividend >= absulateDivisor){
-//         absulateDividend = absulateDividend - absulateDivisor
-//         result++
-//     }
-    
-//     return (dividend>0 && divisor<0) || (dividend<0 && divisor>0) ? -result : result
+    return (dividend>0 && divisor<0) || (dividend<0 && divisor>0) ? -result : result
 };
