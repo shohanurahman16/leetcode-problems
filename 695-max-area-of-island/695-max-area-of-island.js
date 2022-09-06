@@ -8,14 +8,13 @@ var maxAreaOfIsland = function(grid) {
     let maxCounter = 0
     
     function DFS(grid, r, c){
-        let counter = 0
-        
         if (r < 0 || r >= rows || c < 0 || c >= cols || grid[r][c] != 1){
             return 0;
         }
         
         grid[r][c] = 0
-        counter++
+        
+        let counter = 1
         
         counter = counter + DFS(grid, r, c-1) //left
         counter = counter + DFS(grid, r, c+1) //right
