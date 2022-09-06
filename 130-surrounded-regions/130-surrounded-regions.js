@@ -7,7 +7,7 @@ var solve = function(board) {
     let cols = board[0].length
     
     function DFS(board, r, c){
-        if (r < 0 || r == rows || c < 0 || c == cols || board[r][c] != "O"){
+        if (r < 0 || r >= rows || c < 0 || c >= cols || board[r][c] != "O"){
             return;
         }
         
