@@ -8,11 +8,11 @@ var numIslands = function(grid) {
     let cols = grid[0].length
     
     function DFS(grid, r, c){
-        if (r < 0 || r >= rows || c < 0 || c >= cols || grid[r][c] != "1"){
+        if (r < 0 || r >= rows || c < 0 || c >= cols || grid[r][c] == "0"){
             return;
         }
         
-        grid[r][c] = "2"
+        grid[r][c] = "0"
         
         DFS(grid, r, c-1) //left
         DFS(grid, r, c+1) //right
