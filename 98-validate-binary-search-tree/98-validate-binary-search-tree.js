@@ -12,7 +12,6 @@
  */
 var isValidBST = function(root) {
     if (!root) return true
-    //console.log(Number.MIN_VALUE, Number.MAX_VALUE)
     return DFS(root, Number.MIN_SAFE_INTEGER, Number.MAX_SAFE_INTEGER)
 };
 
