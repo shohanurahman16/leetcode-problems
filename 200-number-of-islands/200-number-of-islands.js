@@ -12,7 +12,7 @@ var numIslands = function(grid) {
             return;
         }
         
-        grid[r][c] = "0"
+        grid[r][c] = "2"
         
         DFS(grid, r, c-1) //left
         DFS(grid, r, c+1) //right
