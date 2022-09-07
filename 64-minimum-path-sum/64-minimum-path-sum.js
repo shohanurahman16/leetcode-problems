@@ -24,7 +24,6 @@ var minPathSum = function(grid) {
 //     return DFS(m-1, n-1)
     
     // BFS solution
-    
     let dp = []
     for(let i=0; i <= m; i++){
         dp[i] = []
