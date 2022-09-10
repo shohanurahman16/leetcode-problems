@@ -14,3 +14,19 @@ var twoSum = function(nums, target) {
         }
     }
 };
+
+// isn't it better than O(n*2) ?
+const getresult = (numbers, target) => { 
+    for (i = 0; i < numbers.length; i++) {
+        let n2 = target - numbers[i];
+        let index2 = numbers.indexOf(n2);
+        if (index2 != -1 && n2 + numbers[i] == target) {
+            let result = [
+                numbers.indexOf(numbers[i]),
+                numbers.indexOf(n2),
+            ];
+            console.log(result);
+            return result;
+        }
+    }
+}
